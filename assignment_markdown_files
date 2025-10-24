@@ -1,0 +1,32 @@
+Strapi Audit Logging Plugin
+
+A comprehensive audit logging system for Strapi that automatically tracks all content changes through the Content API with detailed change tracking and flexible querying capabilities.
+
+Architecture Overview
+
+This plugin integrates seamlessly with Strapi's core architecture using:
+Core Components
+Lifecycle Hooks: Automatically captures create, update, and delete operations
+Custom Content Type: Stores audit logs in dedicated `audit_logs` collection
+REST API: Provides filtered querying with pagination and sorting
+Role-Based Access Control: Secure access to audit data
+Configuration System: Flexible enable/disable and content type exclusion
+
+
+Features
+Automated Audit Logging
+Automatic tracking of all create, update, delete operations
+Comprehensive metadata content type, record ID, action, timestamp, user
+Change tracking Field-level diffs for updates, full payload for create/delete
+User context Captures authenticated user information
+
+REST API
+Filter by: Content type, user, action type, date
+Pagination: Limit/offset based pagination
+Sorting: Multiple field sorting support
+
+Security & Configuration
+Role-based access: Only users with `read_audit_logs` permission can access
+Configurable: Global enable/disable and content type exclusion
+Error handling: Graceful error recovery without breaking operations
+
